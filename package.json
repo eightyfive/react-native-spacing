@@ -1,0 +1,39 @@
+{
+  "name": "react-native-spacing",
+  "version": "0.2.11",
+  "description": "React Native View spacing utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eightyfive/react-native-spacing.git"
+  },
+  "keywords": [
+    "react-native",
+    "spacing",
+    "utility"
+  ],
+  "author": "Benoit Sagols <benoit.sagols@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eightyfive/react-native-spacing/issues"
+  },
+  "homepage": "https://github.com/eightyfive/react-native-spacing#readme",
+  "peerDependencies": {
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
+    "babel-jest": "^24.9.0",
+    "jest": "^25.2.7",
+    "metro-react-native-babel-preset": "^0.57.0",
+    "prettier": "^2.0.2",
+    "react-native": "^0.63"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
