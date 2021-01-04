@@ -106,7 +106,7 @@ Package includes a simple `View` component with spacing props `m` & `p`:
 
 ```js
 // src/components/box.js
-import createView, { createMargin, createPadding } from 'react-native-spacing';
+import createView from 'react-native-spacing';
 
 import { m, p } from '../theme';
 
