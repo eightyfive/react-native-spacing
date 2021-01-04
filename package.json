@@ -1,7 +1,7 @@
 {
   "name": "react-native-spacing",
   "version": "0.2.11",
-  "description": "React Native View spacing utility",
+  "description": "Consitent React Native View spacing utility",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -13,6 +13,7 @@
   "keywords": [
     "react-native",
     "spacing",
+    "view",
     "utility"
   ],
   "author": "Benoit Sagols <benoit.sagols@gmail.com>",
