@@ -14,7 +14,7 @@ $ yarn add react-native-spacing
 // src/theme.js
 import { createMargin, createPadding } from 'react-native-spacing';
 
-export const sizes = [0, 5, 10, 20, 40, 80, 160];
+const sizes = [0, 5, 10, 20, 40, 80, 160];
 
 export const m = createMargin(sizes);
 
@@ -28,14 +28,14 @@ import { m, p } from '../theme';
 const $ = {
   container: {
     ...m[6],
-    ...m.b0,
     ...p.v4,
   },
 };
 // --> { margin: 160, marginBottom: 0, paddingVertical: 40 }
 
 export default function Foo({ style, ...rest }) {
-  return <View {...rest} style={[$.container, style]} />;
+  return <View {...rest} style={[$.container, m.b0, p.t0,  style]} />;
+  // --> ... + { marginBottom: 0 }, { paddingTop: 0 } + style
 }
 ```
 
