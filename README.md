@@ -1,6 +1,6 @@
 # react-native-spacing
 
-Consitent React Native `View` spacing utility.
+Consitent React Native spacing utility.
 
 ## Installation
 
@@ -11,7 +11,7 @@ $ yarn add react-native-spacing
 ## Usage
 
 ```js
-// src/views/theme.js
+// src/theme.js
 import { createMargin, createPadding } from 'react-native-spacing';
 
 export const sizes = [0, 5, 10, 20, 40, 80, 160];
@@ -20,35 +20,22 @@ export const m = createMargin(sizes);
 
 export const p = createPadding(sizes);
 
-// src/views/atoms/box.js
-import createView from 'react-native-spacing';
+// src/components/foo.js
+import { View } from 'react-native';
 
 import { m, p } from '../theme';
-
-export default createView(m, p);
-
-// src/views/some-component.js
-import Box from './atoms/box';
-
-export default function SomeComponent({ children }) {
-  return <Box p="3">{children}</Box>;
-  // --> { padding: 20 }
-}
-
-// src/views/some-other-component.js
-import { View } from 'react-native';
-import { m } from './theme';
 
 const $ = {
   container: {
     ...m[6],
     ...m.b0,
+    ...p.v4,
   },
 };
-// --> { margin: 160, marginBottom: 0 }
+// --> { margin: 160, marginBottom: 0, paddingVertical: 40 }
 
-export default function SomeOtherComponent({ children }) {
-  return <View style={$.container}>{children}</View>;
+export default function Foo({ style, ...rest }) {
+  return <View {...rest} style={[$.container, style]} />;
 }
 ```
 
@@ -98,34 +85,4 @@ const p = createPadding([0, 4, 8, 16, 32]);
 p[4]; // --> { padding: 32 }
 
 // Same as above...
-```
-
-### `createView(margins, paddings)`
-
-Package includes a simple `View` component with spacing props `m` & `p`:
-
-```js
-// src/components/box.js
-import createView from 'react-native-spacing';
-
-import { m, p } from '../theme';
-
-export default createView(m, p);
-```
-
-Which can be used like so:
-
-```js
-// src/App.js
-import Box from './components/box';
-
-// sizes = [0, 10, 20, 40, 80];
-
-<Box p="4" />; // --> { padding: 80 }
-<Box m="b3" />; // --> { marginBottom: 40 }
-
-<Box m="3 b0 v1" p="t2" />;
-// --> { margin: 40, marginBottom: 0, marginVertical: 10, paddingTop: 20 }
-
-// Etc...
 ```

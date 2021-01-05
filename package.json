@@ -1,7 +1,7 @@
 {
   "name": "react-native-spacing",
   "version": "0.3.0",
-  "description": "Consitent React Native View spacing utility",
+  "description": "Consitent React Native spacing utility",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -22,9 +22,6 @@
     "url": "https://github.com/eightyfive/react-native-spacing/issues"
   },
   "homepage": "https://github.com/eightyfive/react-native-spacing#readme",
-  "peerDependencies": {
-    "react-native": "*"
-  },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/runtime": "^7.7.7",
