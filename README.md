@@ -1,11 +1,17 @@
-# react-native-spacing
+# `react-native-spacing`
 
 Consitent React Native spacing utility.
+
+
+## [DEPRECATED]
+
+Use [`react-native-themesheet`](https://github.com/eightyfive/react-native-themesheet) + [`react-native-col`](https://github.com/eightyfive/react-native-col) instead.
+
 
 ## Installation
 
 ```
-$ yarn add react-native-spacing
+yarn add react-native-spacing
 ```
 
 ## Usage
